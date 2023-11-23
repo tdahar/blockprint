@@ -102,6 +102,13 @@ gunicorn api_server:app --timeout 1800
 
 It will take a few minutes to start-up while it loads all of the training data into memory.
 
+### Creating a self-signed certificate
+
+```
+openssl req -newkey rsa:2048 -nodes -keyout key.pem -x509 -days 365 -out cert.pem
+```
+You may execute this command and insert files in the folder `./certs/`
+
 ### License
 
 Copyright 2021 Sigma Prime and blockprint contributors
