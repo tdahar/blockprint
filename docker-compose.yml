@@ -61,6 +61,7 @@ services:
     - ./Caddyfile:/etc/caddy/Caddyfile:ro
     - ./data/caddy/data:/data
     - ./data/caddy/config:/config
+    - ./certs:/certs
     restart: unless-stopped
     networks:
       - cluster
